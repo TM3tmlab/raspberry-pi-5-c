@@ -133,7 +133,7 @@ int main() {
     }
 
     while (loop) {
-        int adc = read_mcp3008(fd, 0); // CH0
+        int adc = read_mcp3208(fd, 0); // CH0
         if (adc >= 500) {
             gpiod_line_set_value(line_led, GPIO_HIGH);
         } else {
